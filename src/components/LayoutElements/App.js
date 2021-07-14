@@ -6,6 +6,9 @@ import Modal from '../Layout/Modal'
 
 import fetchCharacter from '../../services/fetchCharacter'
 import fetchCharacterById from '../../services/fetchCharacterById'
+import fetchCharactersStatus from '../../services/fetchCharactersStatus'
+import fetchCharactersGender from '../../services/fetchCharactersGender'
+import fetchCharactersSpecies from '../../services/fetchCharactersSpecies'
 
 export default function App() {
 
@@ -74,6 +77,39 @@ export default function App() {
 		}
 	}
 
+	const [ doughnutChartContent, setDoughnutChartContent ] = React.useState({})
+
+	React.useEffect(() => {
+		const getCharacterStatus = async () => {
+			let response = await fetchCharactersStatus()
+			setDoughnutChartContent(response)
+		}
+
+		getCharacterStatus()
+	}, [])
+
+	const [ pieChartContent, setPieChartContent ] = React.useState({})
+
+	React.useEffect(() => {
+		const getCharacterSpecies = async () => {
+			let response = await fetchCharactersSpecies()
+			setPieChartContent(response)
+		}
+
+		getCharacterSpecies()
+	}, [])
+
+	const [ polarChartContent, setPolarChartContent ] = React.useState({})
+
+	React.useEffect(() => {
+		const getCharacterGender = async () => {
+			let response = await fetchCharactersGender()
+			setPolarChartContent(response)
+		}
+
+		getCharacterGender()
+	}, [])
+
 	return (
 		<div id="app">
 			<Header />
@@ -86,6 +122,9 @@ export default function App() {
 				inputCharacterValue={inputCharacterValue}
 				setInputCharacterValue={setInputCharacterValue}
 				getCharacterById={getCharacterById}
+				doughnutChartContent={doughnutChartContent}
+				polarChartContent={polarChartContent}
+				pieChartContent={pieChartContent}
 			/>
 			{isModalActive &&
 				<Modal

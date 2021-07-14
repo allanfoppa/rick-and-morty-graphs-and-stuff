@@ -16,7 +16,10 @@ export default function Main({
 	setInputCharacterValue,
 	characterProfile,
 	getCharacterById,
-	characterProfileList
+	characterProfileList,
+	doughnutChartContent,
+	polarChartContent,
+	pieChartContent
 }) {
 	return (
 		<main className="container px-3">
@@ -49,13 +52,19 @@ export default function Main({
 
 				<div className="columns">
 					<div className="column">
-						<DoughnutChart />
+						<DoughnutChart
+							doughnutChartContent={doughnutChartContent}
+						/>
 					</div>
 					<div className="column">
-						<PieChart />
+						<PieChart
+							pieChartContent={pieChartContent}
+						/>
 					</div>
 					<div className="column">
-						<PolarChart />
+						<PolarChart
+							polarChartContent={polarChartContent}
+						/>
 					</div>
 				</div>
 			</section>
@@ -72,4 +81,7 @@ Main.propTypes = {
 	getCharacterById: PropTypes.func.isRequired,
 	characterProfileList: PropTypes.array.isRequired,
 	characterProfile: PropTypes.array.isRequired,
+	doughnutChartContent: PropTypes.object.isRequired,
+	polarChartContent: PropTypes.object.isRequired,
+	pieChartContent: PropTypes.object.isRequired,
 }
