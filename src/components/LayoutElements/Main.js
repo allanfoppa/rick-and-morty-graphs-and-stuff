@@ -1,3 +1,4 @@
+import React from 'react'
 import PropTypes from 'prop-types'
 
 import Title from '../Foundation/Title'
@@ -8,12 +9,13 @@ import DoughnutChart from '../Media/DoughnutChart'
 import PieChart from '../Media/PieChart'
 import PolarChart from '../Media/PolarChart'
 
+import { EventsDispatch } from './App'
+
 export default function Main({
 	isSearchLoading,
 	isListNecessary,
 	getCharacter,
 	inputCharacterValue,
-	setInputCharacterValue,
 	characterProfile,
 	getCharacterById,
 	characterProfileList,
@@ -21,6 +23,9 @@ export default function Main({
 	polarChartContent,
 	pieChartContent
 }) {
+
+	const updateEventsDispatch = React.useContext(EventsDispatch);
+
 	return (
 		<main className="container px-3">
 			<section id="search__character">
@@ -33,7 +38,7 @@ export default function Main({
 					isSearchLoading={isSearchLoading}
 					getCharacter={getCharacter}
 					inputCharacterValue={inputCharacterValue}
-					setInputCharacterValue={setInputCharacterValue}
+					updateEvent={updateEventsDispatch}
 				/>
 				<SearchCharacterBox
 					getCharacterById={getCharacterById}
@@ -77,7 +82,6 @@ Main.propTypes = {
 	isSearchLoading: PropTypes.bool.isRequired,
 	isListNecessary: PropTypes.bool.isRequired,
 	inputCharacterValue: PropTypes.string.isRequired,
-	setInputCharacterValue: PropTypes.func.isRequired,
 	getCharacterById: PropTypes.func.isRequired,
 	characterProfileList: PropTypes.array.isRequired,
 	characterProfile: PropTypes.array.isRequired,

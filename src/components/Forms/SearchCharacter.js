@@ -2,8 +2,14 @@ import PropTypes from 'prop-types'
 
 import Input from "./components/Input"
 import Button from "./components/Button"
+import React from 'react'
 
-export default function SearchCharacter({isSearchLoading, getCharacter, inputCharacterValue, setInputCharacterValue}){
+export default function SearchCharacter({
+  isSearchLoading,
+  getCharacter,
+  inputCharacterValue,
+  updateEvent
+}){
   return(
     <form>
       <div className="field has-addons">
@@ -13,7 +19,7 @@ export default function SearchCharacter({isSearchLoading, getCharacter, inputCha
             placeholder="Ex: Alien Rick"
             styling="input"
             inputValue={inputCharacterValue}
-            setInputValue={setInputCharacterValue}
+            setInputValue={updateEvent}
           />
         </div>
         <div className="control">
@@ -35,5 +41,4 @@ SearchCharacter.propTypes = {
   getCharacter: PropTypes.func.isRequired,
   isSearchLoading: PropTypes.bool.isRequired,
 	inputCharacterValue: PropTypes.string.isRequired,
-	setInputCharacterValue: PropTypes.func.isRequired,
 }
