@@ -42,6 +42,7 @@ This is an example of how you may give instructions on setting up your project l
 - [ ] Add more graphs
 - [ ] Increase coverage of tests
 
-## Contributing
+## FINAL CONSIDERATIONS
 
-Any contributions you make are **greatly appreciated**.
+This application is a practice project built to explore technologies and concepts. It's not intended for commercial use and may not adhere to best practices for production environments.
+Feel free to explore, contribute, or provide feedback. Thank you for checking it out!
