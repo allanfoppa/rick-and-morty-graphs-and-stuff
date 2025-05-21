@@ -1,5 +1,5 @@
 
-import Image from '../Media/Image'
+import { Image } from '../../components'
 import Logo from '../../assets/images/logo.png'
 
 export default function Header(){

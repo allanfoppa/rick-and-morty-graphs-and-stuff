@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './components/LayoutElements/App'
+import App from './App'
 
 import 'bulma/css/bulma.min.css'
 

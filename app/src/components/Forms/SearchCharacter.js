@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types'
 
-import Input from "./components/Input"
-import Button from "./components/Button"
-import React from 'react'
+import { Input, Button } from '../../components'
 
 export default function SearchCharacter({
   isSearchLoading,

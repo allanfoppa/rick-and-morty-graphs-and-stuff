@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-import Image from '../Media/Image'
+import { Image } from '../../components'
 
 export default function Modal({active, closeLayer, characterProfile}) {
   return(

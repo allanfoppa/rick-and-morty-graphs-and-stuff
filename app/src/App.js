@@ -1,14 +1,16 @@
 import React from 'react'
 
-import Header from './Header'
-import Main from './Main'
-import Modal from '../Layout/Modal'
+import Header from './components/LayoutElements/Header'
+import Main from './components/LayoutElements/Main'
+import Modal from './components/Layout/Modal'
 
-import fetchCharacter from '../../services/fetchCharacter'
-import fetchCharacterById from '../../services/fetchCharacterById'
-import fetchCharactersStatus from '../../services/fetchCharactersStatus'
-import fetchCharactersGender from '../../services/fetchCharactersGender'
-import fetchCharactersSpecies from '../../services/fetchCharactersSpecies'
+import {
+    fetchCharacter,
+    fetchCharacterById,
+    fetchCharactersStatus,
+    fetchCharactersGender,
+    fetchCharactersSpecies
+} from './services'
 
 export const EventsDispatch = React.createContext(null);
 
@@ -41,7 +43,6 @@ export default function App() {
 	const getCharacterResponse = (status, data) => {
 		switch (status) {
 			case 200:
-				console.log('[COUNT]', data.info.count)
 				updateEvent({ characterProfile: data.results })
 				if (data.info.count === 1) return updateEvent({ isModalActive :true })
 
@@ -58,7 +59,6 @@ export default function App() {
 	}
 
 	const getCharacterById = async (id) => {
-		console.log('[ID BY ID]', id)
 		const data = await fetchCharacterById(id)
 		fetchCharacterByIdResponse(
 			data.response,
@@ -69,7 +69,6 @@ export default function App() {
 	const fetchCharacterByIdResponse = (status, data) => {
 		switch (status) {
 			case 200:
-				console.log('[fetchCharacterByIdResponse]', data)
 				updateEvent({ isListNecessary: false})
 				updateEvent({ characterProfile: data })
 				updateEvent({ isModalActive :true })

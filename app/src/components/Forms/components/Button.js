@@ -1,7 +1,12 @@
-
 import PropTypes from 'prop-types'
 
-export default function Button({children, type = 'button', styling, isSearchLoading, eventClick}) {
+export default function Button({
+  children,
+  type = 'button',
+  styling,
+  isSearchLoading,
+  eventClick
+}) {
   return(
     <button
       type={type}

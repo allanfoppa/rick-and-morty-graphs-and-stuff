@@ -13,6 +13,6 @@ export default async function fetchCharacter(search){
 
     return data
   } catch (error) {
-    return console.log('Houve um problema com a requisição Fetch: ' + error.message)
+    return console.error('Houve um problema com a requisição Fetch: ' + error.message)
   }
 }

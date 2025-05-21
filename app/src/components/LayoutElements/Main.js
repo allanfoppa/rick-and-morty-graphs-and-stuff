@@ -9,7 +9,7 @@ import DoughnutChart from '../Media/DoughnutChart'
 import PieChart from '../Media/PieChart'
 import PolarChart from '../Media/PolarChart'
 
-import { EventsDispatch } from './App'
+import { EventsDispatch } from '../../App'
 
 export default function Main({
 	isSearchLoading,
