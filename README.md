@@ -7,6 +7,7 @@
 <!-- markdownlint-disable -->
 
 <!-- LAYOUT PREVIEW -->
+
 ## LAYOUT
 
 ### Home
@@ -18,6 +19,7 @@
 ![Details](.github/rick-and-morty-graphs-and-stuff-details.png)
 
 <!-- GETTING STARTED -->
+
 ## Getting Started
 
 This is an example of how you may give instructions on setting up your project locally.
@@ -33,7 +35,7 @@ This is an example of how you may give instructions on setting up your project l
 2. Run a Docker command
 
    ```shell
-   docker-compose up
+   docker compose up
    ```
 
 ## Next steps

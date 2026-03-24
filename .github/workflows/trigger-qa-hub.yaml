@@ -1,0 +1,22 @@
+name: Trigger QA Hub
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  notify-hub:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch Event to QA Hub
+        run: |
+          curl -X POST \
+          -H "Authorization: token ${{ secrets.QA_HUB_PAT }}" \
+          -H "Accept: application/vnd.github.v3+json" \
+          https://api.github.com/repos/allanfoppa/ai-qa-testing-hub/dispatches \
+          -d '{
+            "event_type": "run-qa-suite",
+            "client_payload": {
+              "project_id": "rick-and-morty-graphs-and-stuff"
+            }
+          }'
