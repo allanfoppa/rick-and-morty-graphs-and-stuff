@@ -15,8 +15,15 @@ jobs:
           -H "Accept: application/vnd.github.v3+json" \
           https://api.github.com/repos/allanfoppa/ai-qa-testing-hub/dispatches \
           -d '{
-            "event_type": "run-playwright-suite",
+            "event_type": "run-rick-and-morty-graphs-and-stuff-tests",
             "client_payload": {
-              "project_id": "rick-and-morty-graphs-and-stuff"
+              "project_id": "rick-and-morty-graphs-and-stuff",
+              "workspace_name": "@hub/rick-and-morty-graphs-and-stuff",
+              "repo": "allanfoppa/rick-and-morty-graphs-and-stuff",
+              "root_path": "app",
+              "port": 3000,
+              "build_script": "build",
+              "start_command": "pnpm run start",
+              "wait_condition": "http://127.0.0.1:$PORT"
             }
           }'
