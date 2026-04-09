@@ -20,6 +20,10 @@ jobs:
             "event_type": "run-rick-and-morty-graphs-and-stuff-frontend-tests",
             "client_payload": {
               "repo": "${{ github.repository }}",
-              "workspace_name": "@hub/rick-and-morty-graphs-and-stuff-frontend"
+              "workspace_name": "@hub/rick-and-morty-graphs-and-stuff-frontend",
+              "rootPath": "app",
+              "build": "npm run build",
+              "start": "npm run start",
+              "port": "3000"
             }
           }'

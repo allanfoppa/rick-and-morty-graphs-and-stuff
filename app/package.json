@@ -20,12 +20,6 @@
     "test": "jest --coverage=true --watch",
     "eject": "react-scripts eject"
   },
-  "qa": {
-    "build": "npm run build",
-    "start": "npm run start",
-    "port": "3000",
-    "rootPath": "app"
-  },
   "eslintConfig": {
     "extends": [
       "react-app",
