@@ -24,7 +24,7 @@
     "build": "npm run build",
     "start": "npm run start",
     "port": "3000",
-    "rootPath": "/app"
+    "rootPath": "app"
   },
   "eslintConfig": {
     "extends": [
