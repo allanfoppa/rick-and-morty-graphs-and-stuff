@@ -21,7 +21,7 @@ jobs:
             "client_payload": {
               "repo": "${{ github.repository }}",
               "workspace_name": "@hub/rick-and-morty-graphs-and-stuff-frontend",
-              "rootPath": "app",
+              "root_path": "app",
               "build": "npm run build",
               "start": "npm run start",
               "port": "3000"
