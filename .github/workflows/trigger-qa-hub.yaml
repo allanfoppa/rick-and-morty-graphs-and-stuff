@@ -1,4 +1,4 @@
-name: Trigger QA Hub
+name: Trigger QA Hub (Rick & Morty)
 
 on:
   push:
@@ -9,12 +9,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Dispatch Event to QA Hub
+        env:
+          GH_TOKEN: ${{ secrets.QA_HUB_PAT }}
         run: |
           curl -X POST \
-          -H "Authorization: token ${{ secrets.QA_HUB_PAT }}" \
+          -H "Authorization: token $GH_TOKEN" \
           -H "Accept: application/vnd.github.v3+json" \
           https://api.github.com/repos/allanfoppa/ai-qa-testing-hub/dispatches \
           -d '{
-            "event_type": "run-rick-and-morty-graphs-and-stuff-frontend-tests",
-            }
+            "event_type": "run-rick-and-morty-graphs-and-stuff-frontend-tests"
           }'
