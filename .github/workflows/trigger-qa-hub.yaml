@@ -17,9 +17,9 @@ jobs:
           -H "Accept: application/vnd.github.v3+json" \
           https://api.github.com/repos/allanfoppa/ai-qa-testing-hub/dispatches \
           -d '{
-            "event_type": "run-rick-and-morty-graphs-and-stuff-frontend-tests"
+            "event_type": "run-rick-and-morty-graphs-and-stuff-frontend-tests",
             "client_payload": {
               "repo": "${{ github.repository }}",
-              "workspace_name": "@hub/rick-and-morty-graphs-and-stuff-frontend",
+              "workspace_name": "@hub/rick-and-morty-graphs-and-stuff-frontend"
             }
           }'
