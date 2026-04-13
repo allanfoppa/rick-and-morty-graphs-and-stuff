@@ -18,7 +18,9 @@
     "start": "CHOKIDAR_USEPOLLING=true react-scripts start",
     "build": "react-scripts build",
     "test": "jest --coverage=true --watch",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "qa:hub:build": "react-scripts build",
+    "qa:hub:start": "npx serve -s dist -l 3000"
   },
   "eslintConfig": {
     "extends": [
