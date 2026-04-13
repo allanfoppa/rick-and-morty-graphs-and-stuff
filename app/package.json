@@ -11,7 +11,7 @@
     "react": "^17.0.2",
     "react-chartjs-2": "^3.0.3",
     "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
+    "react-scripts": "^5.0.1",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
@@ -20,7 +20,7 @@
     "test": "jest --coverage=true --watch",
     "eject": "react-scripts eject",
     "qa:hub:build": "react-scripts build",
-    "qa:hub:start": "npx serve -s dist -l 3000"
+    "qa:hub:start": "npx serve -s build -l 3000"
   },
   "eslintConfig": {
     "extends": [
@@ -41,10 +41,10 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "^7.14.6",
-    "@babel/preset-env": "^7.14.7",
+    "@babel/core": "^7.29.0",
+    "@babel/preset-env": "^7.29.2",
     "babel-jest": "^30.3.0",
     "isomorphic-fetch": "^3.0.0",
-    "jest": "^30.0.0"
+    "jest": "^30.3.0"
   }
 }
